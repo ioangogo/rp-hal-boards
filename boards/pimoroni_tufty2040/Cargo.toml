@@ -1,9 +1,9 @@
 [package]
-name = "pimoroni_badger2040"
+name = "pimoroni_tufty2040"
 version = "0.4.0"
-authors = ["9names", "The rp-rs Developers"]
+authors = ["9names","nyangogo", "The rp-rs Developers"]
 edition = "2018"
-homepage = "https://github.com/rp-rs/rp-hal-boards/tree/main/boards/pimoroni_badger2040"
+homepage = "https://github.com/rp-rs/rp-hal-boards/tree/main/boards/pimoroni_tufty2040"
 description = "Board Support Package for the Pimoroni Badger2040"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/rp-rs/rp-hal-boards.git"
