@@ -1,6 +1,6 @@
-//! # Badger2040 Blinky Example
+//! # tufty2040 Blinky Example
 //!
-//! Blinks the activity LED on a badger2040 board, using an RP2040 Timer in Count-down mode.
+//! Blinks the activity LED on a tufty2040 board, using an RP2040 Timer in Count-down mode.
 //!
 //! See the `Cargo.toml` file for Copyright and licence details.
 
@@ -8,7 +8,7 @@
 #![no_main]
 
 // The macro for our start-up function
-use pimoroni_badger2040::entry;
+use pimoroni_tufty2040::entry;
 
 // GPIO traits
 use embedded_hal::digital::v2::OutputPin;
@@ -19,12 +19,12 @@ use panic_halt as _;
 
 // A shorter alias for the Peripheral Access Crate, which provides low-level
 // register access
-use pimoroni_badger2040::hal::pac;
-use pimoroni_badger2040::hal::Timer;
+use pimoroni_tufty2040::hal::pac;
+use pimoroni_tufty2040::hal::Timer;
 
 // A shorter alias for the Hardware Abstraction Layer, which provides
 // higher-level drivers.
-use pimoroni_badger2040::hal;
+use pimoroni_tufty2040::hal;
 
 // A few traits required for using the CountDown timer
 use embedded_hal::timer::CountDown;
@@ -42,7 +42,7 @@ fn main() -> ! {
     //
     // The default is to generate a 125 MHz system clock
     let _clocks = hal::clocks::init_clocks_and_plls(
-        pimoroni_badger2040::XOSC_CRYSTAL_FREQ,
+        pimoroni_tufty2040::XOSC_CRYSTAL_FREQ,
         pac.XOSC,
         pac.CLOCKS,
         pac.PLL_SYS,
@@ -57,7 +57,7 @@ fn main() -> ! {
     let sio = hal::Sio::new(pac.SIO);
 
     // Set the pins up according to their function on this particular board
-    let pins = pimoroni_badger2040::Pins::new(
+    let pins = pimoroni_tufty2040::Pins::new(
         pac.IO_BANK0,
         pac.PADS_BANK0,
         sio.gpio_bank0,
